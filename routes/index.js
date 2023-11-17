@@ -7,7 +7,7 @@ var chats = require('./chat')
 passport.use(new localStrategy(users.authenticate()))
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB).then(result => {
+mongoose.connect('mongodb://0.0.0.0/n1-finalProject').then(result => {
   console.log("Connected to database")
 }).catch(err => {
   console.log(err)
